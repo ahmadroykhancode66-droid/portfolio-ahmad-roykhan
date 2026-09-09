@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Roykhan — Content Creator & Social Media Specialist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0b0d0e;
+      --cream: #f2f0eb;
+      --gray: #a8aaa7;
+      --line: rgba(255, 255, 255, .13);
+      --max: 1280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto;
+    }
+
+    .dark {
+      background: var(--black);
+      color: #f5f4ef;
+    }
+
+    nav {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 0;
+      color: #fff;
+    }
+
+    nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 25px;
+      font-size: 12px;
+    }
+
+    .navlinks a {
+      opacity: .82;
+      transition: .2s;
+    }
+
+    .navlinks a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 720px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .34)),
+        url("hero-background.jpg") center / cover;
+      filter: saturate(.75);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding-top: 55px;
+    }
+
+    .eyebrow {
+      margin-bottom: 15px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-family: Manrope, sans-serif;
+      font-size: clamp(46px, 7vw, 86px);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h3 {
+      font-family: Manrope, sans-serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.03;
+      letter-spacing: -.04em;
+    }
+
+    .hero h2 {
+      margin-bottom: 18px;
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 500;
+    }
+
+    .hero p {
+      max-width: 530px;
+      color: #d3d3cf;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+      padding: 13px 18px;
+      border: 1px solid currentColor;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #111;
+    }
+
+    .scroll {
+      position: absolute;
+      right: 0;
+      bottom: 32px;
+      font-size: 11px;
+      opacity: .7;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .body {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .about-image {
+      height: 330px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .services {
+      padding: 80px 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1.1fr repeat(4, 1fr);
+      gap: 0;
+      margin-top: 45px;
+    }
+
+    .service {
+      min-height: 155px;
+      padding: 10px 24px;
+      border-left: 1px solid var(--line);
+    }
+
+    .service:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+
+    .service h4 {
+      margin-bottom: 15px;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .service p {
+      color: #aeb0ad;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .work-head,
+    .analytics-head {
+      margin-bottom: 35px;
+    }
+
+    /*
+      PROJECTS:
+      PC       = 4 kolom
+      Tablet   = 2 kolom
+      HP       = 1 kolom
+    */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: start;
+      gap: 18px;
+    }
+
+    .portfolio {
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .portfolio h2 {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    /* Ukuran semua video Instagram dan TikTok dibuat sama */
+.instagram-media,
+.tiktok-embed {
+  display: block;
+  width: 100% !important;
+  height: 540px !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* Menyamakan ukuran tampilan embed di dalamnya */
+.instagram-media iframe,
+.tiktok-embed iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 540px !important;
+  min-height: 540px !important;
+  max-width: 100% !important;
+  border: 0 !important;
+}
+
+/* Setiap kartu dibuat memiliki struktur yang rapi */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.portfolio h2 {
+  flex: 0 0 auto;
+  height: 28px;
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+    /*
+      ANALYTICS
+    */
+    .analytics-section {
+      background: #e8e6e1;
+    }
+
+    .analytics-head {
+      margin-bottom: 42px;
+    }
+
+    .analytics-group {
+      margin-bottom: 58px;
+    }
+
+    .analytics-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .analytics-group-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      font-size: 20px;
+    }
+
+    .analytics-group-title::before {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 24px;
+      background: #b92dde;
+      border-radius: 5px;
+    }
+
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .analytics-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #ddd9d1;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+    }
+
+    .analytics-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 620px;
+      object-fit: contain;
+      background: #111;
+    }
+
+    .analytics-info {
+      padding: 17px 18px 19px;
+    }
+
+    .analytics-info h4 {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .analytics-info p {
+      color: #777;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1050px) {
+      .projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-grid,
+      .skills,
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service {
+        padding: 25px 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .service:first-child {
+        padding-left: 0;
+      }
+
+      .skill-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .analytics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .instagram-media,
+      .tiktok-embed,
+      .instagram-media iframe,
+      .tiktok-embed iframe {
+        height: 500px !important;
+        min-height: 500px !important;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 32px));
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .analytics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 250px;
+      }
+
+      .scroll {
+        display: none;
+      }
+
+      .copyright {
+        display: block;
+      }
+
+      .copyright span {
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .projects {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .skill-cols {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero dark" id="home">
+    <nav>
+      <div class="container inner">
+        <a class="logo" href="#home">AHMAD ROYKHAN</a>
+
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#analytics">Analytics</a>
+          <a href="#process">Process</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+      <div class="eyebrow">Hi, I'm</div>
+
+      <h1>AHMAD<br>ROYKHAN</h1>
+
+      <h2>Content Creator & Social Media Specialist</h2>
+
+      <p>
+        Berpengalaman dalam mengembangkan ide, memproduksi, dan mengelola konten
+        untuk berbagai kebutuhan brand. Fokus pada pengembangan ide konten,
+        peningkatan engagement, brand awareness, dan potential sales melalui
+        social media.
+      </p>
+
+      <a class="btn" href="#work">
+        See My Work <span>↗</span>
+      </a>
+    </div>
+
+    <div class="container scroll">↓ &nbsp; Scroll Down</div>
+  </header>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">About Me</div>
+        <h3>I create content<br>with purpose.</h3>
+      </div>
+
+      <div class="body">
+        Saya adalah Content Creator yang berfokus pada pengembangan ide,
+        produksi konten, dan pengelolaan social media untuk membantu brand
+        meningkatkan awareness, engagement, dan customer interest.
+        <br><br>
+        Didukung kemampuan videography, video editing, dan graphic design,
+        saya dapat menangani proses kreatif dari ide hingga menjadi konten
+        yang siap dipublikasikan.
+      </div>
+
+      <div class="about-image">
+        <img src="potoaku.jpg" alt="Foto Ahmad Roykhan">
+      </div>
+    </div>
+  </section>
+
+  <section class="dark services">
+    <div class="container">
+      <div class="eyebrow">What I Do</div>
+
+      <div class="services-grid">
+        <div>
+          <h3>Turn Ideas<br>Into Content.</h3>
+        </div>
+
+        <div class="service">
+          <h4>CONTENT STRATEGY</h4>
+          <p>Ide Content<br>Content Planning<br>Campaign</p>
+        </div>
+
+        <div class="service">
+          <h4>SOCIAL MEDIA</h4>
+          <p>Account Management<br>Engagement<br>Content Calendar</p>
+        </div>
+
+        <div class="service">
+          <h4>CONTENT PRODUCTION</h4>
+          <p>Shooting<br>Storytelling<br>Creative Direction</p>
+        </div>
+
+        <div class="service">
+          <h4>CREATIVE EDITING</h4>
+          <p>Video Editing<br>Motion Graphics<br>Basic Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="work-head">
+        <div class="eyebrow">Selected Work</div>
+        <h3>Projects</h3>
+      </div>
+
+      <div class="projects">
+        <!-- Instagram 1 -->
+        <article class="portfolio">
+          <h2>Kopi Inggris</h2>
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DYUKHgZq4pr/"
+            data-instgrm-version="14">
+          </blockquote>
+        </article>
+
+        <!-- Instagram 2 -->
+        <article class="portfolio">
+          <h2>Kopi Inggris</h2>
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DZcbkQQKGpH/"
+            data-instgrm-version="14">
+          </blockquote>
+        </article>
+
+        <!-- Instagram 3 -->
+        <article class="portfolio">
+          <h2>Kopi Inggris</h2>
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/Da2TeLCPubz/"
+            data-instgrm-version="14">
+          </blockquote>
+        </article>
+
+        <!-- Instagram 4 -->
+        <article class="portfolio">
+          <h2>Kopi Inggris</h2>
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DclY_32Kd70/"
+            data-instgrm-version="14">
+          </blockquote>
+        </article>
+
+        <!-- Instagram 5 -->
+        <article class="portfolio">
+          <h2>Pondok cilega</h2>
+
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DbAPksYsG3T/"
+            data-instgrm-version="14">
+          </blockquote>
+        </article>
+
+
+        <!-- TikTok 1
+             Ganti URL dan ID dengan video TikTok Anda -->
+        <article class="portfolio">
+          <h2>Pondok cilega</h2>
+
+          <blockquote
+            class="tiktok-embed"
+            cite="https://www.tiktok.com/@username/video/7653804107722968327"
+            data-video-id="7653804107722968327">
+            <section>
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@username/video/7653804107722968327">
+                Lihat video TikTok
+              </a>
+            </section>
+          </blockquote>
+        </article>
+
+        <!-- TikTok 2
+             Ganti URL dan ID dengan video TikTok Anda -->
+        <article class="portfolio">
+          <h2>Pondok cilega</h2>
+
+          <blockquote
+            class="tiktok-embed"
+            cite="https://www.tiktok.com/@username/video/7641469118880697618"
+            data-video-id="7641469118880697618">
+            <section>
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@username/video/7641469118880697618">
+                Lihat video TikTok
+              </a>
+            </section>
+          </blockquote>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="analytics-section" id="analytics">
+    <div class="container">
+      <div class="analytics-head">
+        <div class="eyebrow">Performance Report</div>
+        <h3>Analytics &<br>Results</h3>
+      </div>
+
+      <!-- INSTAGRAM REEL -->
+      <div class="analytics-group">
+        <h4 class="analytics-group-title">Instagram — Performa Reel</h4>
+
+        <div class="analytics-grid">
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-01.jpeg" alt="Instagram Reel insight Kopi Inggris" loading="lazy">
+            <div class="analytics-info">
+              <h4>Spill Menu Kopi Inggris</h4>
+              <p>39.803 tayangan dan 35.673 akun dijangkau.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-02.jpeg" alt="Instagram Reel insight kasir" loading="lazy">
+            <div class="analytics-info">
+              <h4>POV Jadi Kasir</h4>
+              <p>11.511 tayangan dan 2.249 akun dijangkau.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-03.jpeg" alt="Instagram Reel insight cafe" loading="lazy">
+            <div class="analytics-info">
+              <h4>Musik di Cafe Mati</h4>
+              <p>10.917 tayangan dan 2.467 akun dijangkau.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-04.jpeg" alt="Instagram Reel insight sepak bola" loading="lazy">
+            <div class="analytics-info">
+              <h4>Sesi Final Sepak Bola</h4>
+              <p>47.894 tayangan dan 41.915 pemirsa.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-05.jpeg" alt="Instagram Reel insight hijab" loading="lazy">
+            <div class="analytics-info">
+              <h4>Tanpa Filter</h4>
+              <p>17.169 tayangan dan 13 jam waktu tonton.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-06.jpeg" alt="Instagram Reel insight wisata Kuningan" loading="lazy">
+            <div class="analytics-info">
+              <h4>Wisata Kuningan</h4>
+              <p>28.147 tayangan dan 273 total interaksi.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-reel-07.jpeg" alt="Instagram Reel insight konten Cepe" loading="lazy">
+            <div class="analytics-info">
+              <h4>Konten 9 dari 10</h4>
+              <p>21.125 tayangan dan 615 total interaksi.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- INSTAGRAM ACCOUNT -->
+      <div class="analytics-group">
+        <h4 class="analytics-group-title">Instagram — Statistik Akun</h4>
+
+        <div class="analytics-grid">
+          <article class="analytics-card">
+            <img src="analytics/instagram-account-02.jpeg" alt="Instagram pertumbuhan followers" loading="lazy">
+            <div class="analytics-info">
+              <h4>Pertumbuhan Pengikut</h4>
+              <p>Total 316 pengikut dengan pertumbuhan 23,9%.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-account-01.jpeg" alt="Instagram konten populer" loading="lazy">
+            <div class="analytics-info">
+              <h4>Tayangan</h4>
+              <p>Total tayangan untuk akun pondok cilega.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/instagram-account-03.jpeg" alt="Instagram ringkasan performa akun" loading="lazy">
+            <div class="analytics-info">
+              <h4>Tayangan kopi inggris</h4>
+              <p>172.864 tayangan dan pertumbuhan pengikut bersih +61.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- TIKTOK -->
+      <div class="analytics-group">
+        <h4 class="analytics-group-title">TikTok — Video Analysis</h4>
+
+        <div class="analytics-grid">
+          <article class="analytics-card">
+            <img src="analytics/tiktok-video-01.PNG" alt="TikTok video analysis kolam renang" loading="lazy">
+            <div class="analytics-info">
+              <h4>Video Kolam Renang</h4>
+              <p>66,3 ribu views, average watch time 7,8 detik, 22 followers baru.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/tiktok-video-02.PNG" alt="TikTok video analysis cafe" loading="lazy">
+            <div class="analytics-info">
+              <h4>Video Cafe</h4>
+              <p>16 ribu views dan average watch time 12,3 detik.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/tiktok-video-03.PNG" alt="TikTok video analysis konten Cepe" loading="lazy">
+            <div class="analytics-info">
+              <h4>Video 9 dari 10</h4>
+              <p>101,8 ribu views dan 92 followers baru.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/tiktok-video-04.PNG" alt="TikTok video analysis glamping" loading="lazy">
+            <div class="analytics-info">
+              <h4>Video Glamping</h4>
+              <p>65,5 ribu views dan average watch time 24,4 detik.</p>
+            </div>
+          </article>
+
+          <article class="analytics-card">
+            <img src="analytics/tiktok-video-05.PNG" alt="TikTok video analysis pemandangan" loading="lazy">
+            <div class="analytics-info">
+              <h4>Video Pemandangan</h4>
+              <p>18,2 ribu views dan 31 followers baru.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* ===== PROCESS ===== */
+    .process {
+      padding: 110px 0;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(185, 45, 222, .18), transparent 28%),
+        #0b0d0e;
+    }
+
+    .process-intro {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .process-intro p {
+      max-width: 380px;
+      color: #9b9e9d;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .process-row {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-top: 65px;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .process .step {
+      min-height: 165px;
+      padding: 25px 20px;
+      border-left: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .process .step:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .process .step b {
+      display: block;
+      margin-bottom: 35px;
+      color: #d044f1;
+      font-size: 12px;
+      letter-spacing: .12em;
+    }
+
+    .process .step span {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .process .step small {
+      display: block;
+      max-width: 130px;
+      margin-top: 8px;
+      color: #858987;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    /* ===== SKILLS ===== */
+    #skills {
+      background: #f2f0eb;
+    }
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.6fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .skills-copy p {
+      max-width: 350px;
+      margin-top: 22px;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .skill-box {
+      min-height: 160px;
+      padding: 25px;
+      border: 1px solid #d5d1ca;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .45);
+      transition: .25s ease;
+    }
+
+    .skill-box:hover {
+      border-color: #b92dde;
+      background: #fff;
+      transform: translateY(-4px);
+    }
+
+    .skill-number {
+      display: block;
+      margin-bottom: 25px;
+      color: #b92dde;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    .skill-box h4 {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .skill-box p {
+      color: #777;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .skill-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 30px;
+    }
+
+    .skill-tools span {
+      padding: 8px 12px;
+      border: 1px solid #d5d1ca;
+      border-radius: 100px;
+      color: #555;
+      font-size: 11px;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact.contact-section {
+      position: relative;
+      overflow: hidden;
+      padding: 110px 0 35px;
+      color: #fff;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5, 8, 15, .94),
+          rgba(5, 8, 15, .78)
+        ),
+        url("contact-background.jpg") center / cover no-repeat;
+    }
+
+    /* Efek gelap tambahan agar teks tetap terbaca */
+    #contact.contact-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(185, 45, 222, .18),
+          transparent 45%
+        );
+      pointer-events: none;
+    }
+
+    #contact.contact-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #contact.contact-section .contact-title {
+      color: #fff;
+    }
+
+    #contact.contact-section .contact-subtitle {
+      color: rgba(255, 255, 255, .75);
+    }
+
+    #contact.contact-section .contact-email {
+      color: #fff;
+    }
+
+    #contact.contact-section .copyright {
+      color: rgba(255, 255, 255, .55);
+    }
+  </style>
+
+  <section class="dark process" id="process">
+    <div class="container">
+      <div class="process-intro">
+        <div>
+          <div class="eyebrow">My Process</div>
+          <h3>From Idea<br>to Impact.</h3>
+        </div>
+
+        <p>
+          Setiap konten dimulai dari ide yang kuat, diproses dengan strategi,
+          lalu dikembangkan menjadi karya yang memiliki tujuan dan dampak.
+        </p>
+      </div>
+
+      <div class="process-row">
+        <div class="step">
+          <b>01</b>
+          <span>Research</span>
+          <small>Memahami brand, audiens, dan tren.</small>
+        </div>
+
+        <div class="step">
+          <b>02</b>
+          <span>Ideation</span>
+          <small>Mengembangkan konsep yang relevan.</small>
+        </div>
+
+        <div class="step">
+          <b>03</b>
+          <span>Planning</span>
+          <small>Menyusun alur dan kebutuhan produksi.</small>
+        </div>
+
+        <div class="step">
+          <b>04</b>
+          <span>Production</span>
+          <small>Mengubah konsep menjadi visual.</small>
+        </div>
+
+        <div class="step">
+          <b>05</b>
+          <span>Editing</span>
+          <small>Menyempurnakan cerita dan tampilan.</small>
+        </div>
+
+        <div class="step">
+          <b>06</b>
+          <span>Publish</span>
+          <small>Mendistribusikan konten ke audiens.</small>
+        </div>
+
+        <div class="step">
+          <b>07</b>
+          <span>Analyze</span>
+          <small>Mengevaluasi hasil dan performa.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container skills-layout">
+      <div class="skills-copy">
+        <div class="eyebrow">My Skills</div>
+        <h3>Tools &<br>Skills</h3>
+
+        <p>
+          Kombinasi antara kreativitas, strategi, dan kemampuan teknis untuk
+          menghasilkan konten yang menarik serta relevan bagi audiens.
+        </p>
+
+        <div class="skill-tools">
+          <span>Premiere Pro</span>
+          <span>CapCut</span>
+          <span>After Effects</span>
+          <span>Photoshop</span>
+          <span>Illustrator</span>
+        </div>
+      </div>
+
+      <div class="skills-list">
+        <article class="skill-box">
+          <span class="skill-number">01 / STRATEGY</span>
+          <h4>Content Strategy</h4>
+          <p>Content ideation, planning, storytelling, dan campaign development.</p>
+        </article>
+
+        <article class="skill-box">
+          <span class="skill-number">02 / SOCIAL</span>
+          <h4>Social Media</h4>
+          <p>Social media management, audience engagement, dan content optimization.</p>
+        </article>
+
+        <article class="skill-box">
+          <span class="skill-number">03 / PRODUCTION</span>
+          <h4>Content Production</h4>
+          <p>Videography, creative direction, short-form video, dan visual production.</p>
+        </article>
+
+        <article class="skill-box">
+          <span class="skill-number">04 / EDITING</span>
+          <h4>Creative Editing</h4>
+          <p>Video editing, motion graphics, basic design, dan visual storytelling.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div>
+          <div class="eyebrow">Get In Touch</div>
+
+          <div class="contact-title">
+            Let's Create<br>Something.
+          </div>
+
+          <p class="contact-subtitle">
+            Punya ide atau project yang ingin dikembangkan?
+            Mari ubah ide tersebut menjadi konten yang memiliki cerita dan dampak.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a
+            class="contact-email"
+            href="mailto:ahmadroykhancode66@gmail.com">
+            ahmadroykhancode66@gmail.com ↗
+          </a>
+
+          <a
+            class="btn"
+            href="mailto:ahmadroykhancode66@gmail.com">
+            Start a Conversation
+          </a>
+
+     <div class="contact-socials">
+  <a
+    href="https://www.instagram.com/roykhan_studio"
+    target="_blank"
+    rel="noopener noreferrer">
+    [Instagram]
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@vparkseok"
+    target="_blank"
+    rel="noopener noreferrer">
+    [TikTok]
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/ahmad-roykhan-ali-h-854291273"
+    target="_blank"
+    rel="noopener noreferrer">
+    [LinkedIn]
+  </a>
+</div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 Ahmad Roykhan. All rights reserved.</span>
+        <span>Content Creator · Social Media Specialist</span>
+      </div>
+    </div>
+  </footer>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+
+</body>
+</html>
