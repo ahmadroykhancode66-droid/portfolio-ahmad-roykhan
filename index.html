@@ -318,6 +318,19 @@
   line-height: 24px;
 }
 
+.portfolio-instagram-link {
+  display: block;
+  margin-top: 7px;
+  color: #b92dde;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.portfolio-instagram-link:hover {
+  text-decoration: underline;
+}
+
     /*
       ANALYTICS
     */
@@ -432,6 +445,12 @@
       .tiktok-embed iframe {
         height: 340px !important;
         min-height: 340px !important;
+      }
+
+      .instagram-media iframe {
+        width: 118% !important;
+        transform: scale(.85);
+        transform-origin: top left;
       }
 
       .container {
@@ -1559,6 +1578,11 @@
         min-height: 300px !important;
       }
 
+      .instagram-media iframe {
+        width: 125% !important;
+        transform: scale(.8);
+      }
+
       .process {
         padding: 75px 0;
       }
@@ -1821,6 +1845,17 @@
 
   <script async src="https://www.instagram.com/embed.js"></script>
   <script async src="https://www.tiktok.com/embed.js"></script>
+  <script>
+    document.querySelectorAll('.instagram-media[data-instgrm-permalink]').forEach((embed) => {
+      const link = document.createElement('a');
+      link.className = 'portfolio-instagram-link';
+      link.href = embed.dataset.instgrmPermalink;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Buka dan putar di Instagram ↗';
+      embed.parentElement.appendChild(link);
+    });
+  </script>
 
 </body>
 </html>
