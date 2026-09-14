@@ -1846,6 +1846,19 @@
   <script async src="https://www.instagram.com/embed.js"></script>
   <script async src="https://www.tiktok.com/embed.js"></script>
   <script>
+    const localVideos = document.querySelectorAll('video');
+
+    localVideos.forEach((video) => {
+      video.loop = true;
+      video.addEventListener('play', () => {
+        localVideos.forEach((otherVideo) => {
+          if (otherVideo !== video) {
+            otherVideo.pause();
+          }
+        });
+      });
+    });
+
     document.querySelectorAll('.instagram-media[data-instgrm-permalink]').forEach((embed) => {
       const link = document.createElement('a');
       link.className = 'portfolio-instagram-link';
