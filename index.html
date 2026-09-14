@@ -456,7 +456,7 @@
       }
 
       .analytics-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .process-row {
@@ -487,8 +487,8 @@
 
     @media (max-width: 460px) {
       .projects {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
       }
 
       .skill-cols {
@@ -1547,7 +1547,8 @@
       }
 
       .projects {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
       }
 
       .instagram-media,
